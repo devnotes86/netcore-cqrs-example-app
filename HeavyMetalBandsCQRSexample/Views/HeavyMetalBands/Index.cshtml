@@ -1,0 +1,27 @@
+﻿@model List<HeavyMetalBandsCQRSexample.Data.Queries.Band.BandDto>
+
+@{
+    ViewData["Title"] = "Bands List";
+}
+
+<h2>Bands List</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Band Name</th>
+            <th>Created (Year)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var band in Model)
+        {
+            <tr>
+                <td>@band.id</td>
+                <td>@band.band_name</td>
+                <td>@band.year_created</td>
+            </tr>
+        }
+    </tbody>
+</table>
