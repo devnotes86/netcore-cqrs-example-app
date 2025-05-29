@@ -5,13 +5,13 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading;
-    using System.Threading.Tasks; 
+    using System.Threading.Tasks;
 
-    public class GetProductsHandler : IRequestHandler<GetBandsQuery, List<BandDto>>
+    public class GetBandsHandler : IRequestHandler<GetBandsQuery, List<BandDto>>
     {
         private readonly DbContext_Read _context;
 
-        public GetProductsHandler(DbContext_Read context)
+        public GetBandsHandler(DbContext_Read context)
         {
             _context = context;
         }
